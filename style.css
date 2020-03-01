@@ -1,0 +1,52 @@
+body {
+    background-color: Gray;
+	}
+h1 {
+    text-align: center;
+	}
+h1,h2 {color: darkblue;
+	}
+	a {
+	text-decoration: none;
+	}
+a:hover
+	{
+	color: red;
+	}
+.tab1 th {
+	color: white;
+	background-color: black;
+	padding:10px;
+}
+.tab2 th{
+	color: white;
+	background-color: darkblue;
+	padding:10px;
+}
+.tab1 td{
+	border: solid black;
+	padding:10px;
+	}
+.tab2 td{
+	border: solid darkblue;
+	padding:10px;
+	}
+.list {
+	position : fixed;
+	right: 10px;
+	bottom: 10px;
+	background : darkblue;
+	border : solid black;
+}
+.list a {
+	color : white;
+	}
+.list a:hover {color:green;}
+input:focus {
+	background-color: cyan;
+}
+.menu {
+	position:fixed;
+	right: 10px;
+	top: 10px;
+}

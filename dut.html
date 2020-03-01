@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+ <title>Département R&amp;T de l'IUT de Villetaneuse</title>
+ <meta charset="utf-8">
+ <meta name="author" content="Adjutor Aimeric">
+ <link rel="stylesheet" type="text/css" href="style.css">
+
+<script>
+function toggle_div(bouton, id) { 
+  var div = document.getElementById(id);
+  if(div.style.display=="none") {
+    div.style.display = "block"; 
+  } else { 
+    div.style.display = "none"; 
+  }
+}
+</script>
+</head>
+
+<body>
+<h1>Département R&amp;T de l’IUT de Villetaneuse</h1>
+<p>Bienvenue sur le site web du département R&amp;T de l'IUT de Villetaneuse. Voici le menu de cette page :</p>
+<ul>
+ <li><a href="#ENT">L'ENT</a></li>
+ <li><a href="#Prog">Programme du DUT R&amp;T</a></li>
+ <li><a href="#Lien">Liens</a></li>
+ <li><a href="#Contact">Contact</a></li>
+</ul>
+<div class="list" id="list" style="display:none;"><ul>
+ <li><a href="#ENT">L'ENT</a></li>
+ <li><a href="#Prog">Programme du DUT R&amp;T</a></li>
+ <li><a href="#Lien">Liens</a></li>
+ <li><a href="#Contact">Contact</a></li>
+</ul></div>
+<div class="menu" onclick="toggle_div(this,'list');"><em>Menu</em></div>
+<div onclick="toggle_div(this,'content_ENT');"><h2 id="ENT">L'ENT</h2></div>
+<div id="content_ENT" style="display:none;">
+<p>
+L'ENT (espace numérique de travail) vous permet de <strong>voir vos notes</strong>, d'<u>accéder à votre emploi du temps</u> et enfin d'<u><strong>utiliser votre boîte mail.</strong></u>
+</p>
+<p><em>Pour accéder à votre ENT :
+<a href="https://ent.univ-paris13.fr/">
+liens
+</a>
+</em>
+</p>
+</div>
+<div onclick="toggle_div(this,'content_Prog');"><h2 id="Prog">Programme du DUT R&amp;T</h2></div>
+<div id="content_Prog" style="display:none;">
+<p>La formation est organisée sur 4 semestres :</p>
+<table class="tab1">
+ <tr>
+  <th>Semestre</th>
+  <th>Volume horaire</th>
+ </tr>
+ <tr>
+  <td>S1</td>
+  <td>400h</td>
+ </tr>
+  <tr>
+  <td>S2</td>
+  <td>400h</td>
+ </tr>
+  <tr>
+  <td>S3</td>
+  <td>300h</td>
+ </tr>
+  <tr>
+  <td>S4</td>
+  <td>200h</td>
+ </tr>
+</table>
+<p>Les modules enseignés en S1 :</p>
+<table class="tab2">
+ <tr>
+  <th>Module</th>
+  <th colspan="2">Volume horaire</th>
+ </tr>
+ <tr>
+  <td rowspan="3">M1101 - Réseaux d'entreprise</td>
+  <td>CM</td>
+  <td>6h</td>
+ </tr>
+ <tr>
+  <td>TD</td>
+  <td>12h</td>
+ </tr>
+  <tr>
+  <td>TP</td>
+  <td>18h</td>
+ </tr>
+  <tr>
+	<td rowspan="3">M1102 - Téléphonie</td>
+	<td>CM</td>
+	<td>6h</td>
+  </tr>
+  <tr>
+ 	 <td>TD</td>
+ 	 <td>12h</td>
+ </tr>
+  <tr>
+ 	 <td>TP</td>
+ 	 <td>12h</td>
+ </tr>
+</table>
+</div>
+<div onclick="toggle_div(this,'content_Lien');"><h2 id="Lien">Liens</h2></div>
+<div id="content_Lien" style="display:none;">
+<p>L'IUT de Villetaneuse</p>
+<a target="_blank"
+	href="https://iutv.univ-paris13.fr/">
+	<img src="img/iutv.png"
+   	  alt="icone_de_iutv"/>
+</a>
+<p>L'universite Paris 13</p>
+<a target="_blank"
+	href="https://www.univ-paris13.fr/">
+<img src="img/p13.png"
+     alt="icone_de_paris13"/>
+</a>
+</div>
+<div onclick="toggle_div(this,'content_Contact');"><h2 id="Contact">Contact</h2></div>
+<div id="content_Contact" style="display:none;">
+<p>Contactez nous en remplissant ce formulaire:</p>
+<form action="traitement.py">
+<table>
+	<tr>
+		<td>Votre nom:</td>
+		<td><input type="text" name="nom"/></td>
+	</tr>
+	<tr>
+		<td>Votre statut</td>
+		<td>
+		<label>
+		<input type="radio" name="statut" value="lycéen"/>lycéen
+		</label>
+		<label>
+		<input type="radio" name="statut" value="étudiant"/>étudiant
+		</label>
+		<label>
+		<input type="radio" name="statut" value="salarié"/>salarié
+		</label>
+		<label>
+		<input type="radio" name="statut" checked value="autre"/>autre
+		</label>
+		</td>
+	</tr>
+	<tr>
+		<td>Votre question:</td>
+		<td><input type="text" size="60" name="question"/></td>
+	</tr>
+</table>
+	<input type="submit" value="Valider"/><br/>
+</form>
+</div>
+</body>
+</html>
